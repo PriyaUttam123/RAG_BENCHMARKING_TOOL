@@ -1,9 +1,6 @@
 ﻿# RAG_BENCHMARKING_TOOL
 Compare RAG pipeline configurations on answer quality (RAGAS), latency and cost, and find the best setup for your data.
 
-Live Demo | Demo Video | Architecture
-
-Replace the links above once deployed.
 
 The Problem
 
@@ -54,57 +51,7 @@ Top-k	3, 5, 8
 Embedding model	Gemini embeddings, open-source models
 Retrieval method	Dense, hybrid, reranked
 LLM / prompt	Gemini, others
-Screenshots
-<!-- Add screenshots: docs/dashboard.png, docs/config-builder.png, docs/run-results.png -->
-Sample Results
-<!-- Fill this with your own measured numbers. Do not invent values. -->
-Config	Faithfulness	Answer Relevancy	Context Precision	Context Recall	p50 Latency	Cost / 100 queries
-(your config A)						
-(your config B)						
-(your config C)						
-
-Key finding: Write one real conclusion from your runs here.
-
-Getting Started
-Prerequisites
-Python 3.10+
-Node.js 18+
-A Google AI Studio API key
-A Supabase project
-1. Clone
-bash
-git clone https://github.com/PriyaUttam123/RAG_PIPELINE_BENCHMARKING_TOOL.git
-cd RAG_PIPELINE_BENCHMARKING_TOOL
-2. Configure environment
-bash
-cp .env.example .env
-
-Fill in:
-
-GEMINI_API_KEY=
-SUPABASE_URL=
-SUPABASE_KEY=
-3. Backend
-bash
-cd backend
-python -m venv venv
-source venv/bin/activate      # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-
-API runs at http://localhost:8000 (docs at /docs).
-
-4. Frontend
-bash
-cd frontend
-npm install
-npm run dev
-
-App runs at http://localhost:5173.
-
-5. Database
-
-Run the SQL in docs/schema.sql in the Supabase SQL editor to create the tables: datasets, documents, test_questions, configs, benchmark_runs, results.
+				
 
 Project Structure
 backend/
